@@ -2,6 +2,19 @@
 
 <img alt="Logo" src="graphics/icon.webp" width="120" />
 
+## 📖 开发者文档
+
+如果你是Kotlin开发新手，想要学习这个项目的架构和实现方式，请查看 **[完整的中文文档](./docs/README.md)** 📚
+
+文档包括：
+- 📋 [快速参考](./docs/00-快速参考.md) - 常用命令和常量速查
+- 🏗️ [项目架构](./docs/02-项目架构.md) - 架构设计和组件说明
+- 📦 [依赖关系](./docs/03-依赖关系.md) - 依赖库详解
+- 🔧 [编译指南](./docs/05-编译指南.md) - 环境配置和编译步骤
+- 🔄 [Git同步指南](./docs/06-Git同步指南.md) - 保持fork与上游同步
+
+---
+
 <a href="https://play.google.com/store/apps/details?id=org.fossify.voicerecorder"><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height=80/></a> <a href="https://f-droid.org/packages/org.fossify.voicerecorder/"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on-en.svg" alt="Get it on F-Droid" height=80/></a> <a href="https://apt.izzysoft.de/fdroid/index/apk/org.fossify.voicerecorder"><img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Get it on IzzyOnDroid" height=80/></a>
 
 Introducing Fossify Voice Recorder – where capturing crystal-clear audio and preserving precious moments is effortless and enjoyable. Seamlessly blend
