@@ -163,6 +163,15 @@ A:
 3. 其他组件可以订阅事件（subscribe）
 4. 实现组件间的解耦通信
 
+### Q: 如何保持fork与上游同步？
+
+A:
+1. 添加上游仓库：`git remote add upstream https://github.com/FossifyOrg/Voice-Recorder.git`
+2. 获取上游更改：`git fetch upstream`
+3. 合并到本地：`git merge upstream/main`
+4. 推送到你的fork：`git push origin main`
+5. 详细说明请查看 [Git同步指南](./06-Git同步指南.md)
+
 ## 资源链接
 
 - [Kotlin官方文档](https://kotlinlang.org/docs/home.html)
@@ -170,14 +179,67 @@ A:
 - [EventBus文档](https://greenrobot.org/eventbus/)
 - [Gradle用户指南](https://docs.gradle.org/current/userguide/userguide.html)
 
+## 保持与上游同步
+
+如果你fork了这个项目，需要定期同步上游仓库的更新：
+
+### 快速同步步骤
+
+```bash
+# 1. 确保在main分支
+git checkout main
+
+# 2. 获取上游更改
+git fetch upstream
+
+# 3. 合并上游更改
+git merge upstream/main
+
+# 4. 推送到你的远程仓库
+git push origin main
+```
+
+### 首次设置上游仓库
+
+如果还没有配置上游仓库：
+
+```bash
+# 添加上游仓库
+git remote add upstream https://github.com/FossifyOrg/Voice-Recorder.git
+
+# 验证配置
+git remote -v
+```
+
+### 注意事项
+
+1. **定期同步**: 建议每周或每次开始工作前同步一次
+2. **先同步再开发**: 在开始新功能前先同步上游
+3. **保持main分支干净**: 在功能分支上开发，main分支只用于同步
+4. **查看差异**: 合并前先查看上游有什么更改（`git log main..upstream/main`）
+5. **测试合并**: 合并后测试确保一切正常
+
+### 处理冲突
+
+如果合并时出现冲突：
+1. 查看冲突文件：`git status`
+2. 手动解决冲突（查找 `<<<<<<<`, `=======`, `>>>>>>>` 标记）
+3. 标记为已解决：`git add <冲突文件>`
+4. 完成合并：`git commit`
+
+**详细说明**: 查看 [Git同步指南](./06-Git同步指南.md)
+
 ## 贡献指南
 
 如果你想为项目做贡献：
 
 1. Fork项目
-2. 创建功能分支
-3. 编写代码并测试
-4. 提交Pull Request
+2. 同步上游仓库（见上方说明）
+3. 创建功能分支：`git checkout -b feature/your-feature`
+4. 编写代码并测试
+5. 提交更改：`git commit -m "描述你的更改"`
+6. 推送到你的fork：`git push origin feature/your-feature`
+7. 在GitHub上创建Pull Request
 
 ## 许可证
 
